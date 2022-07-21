@@ -2,7 +2,16 @@
 
 # Operadores
 
+## Ordem de Precedência
+
+1. Aritiméticos
+2. Relacionais
+3. Lógicos
+4. Ternários
+
 <br>
+
+## OPERADORES e OPERANDOS
 
 Os OPERANDOS são os elementos à serem manipulados pelos Operadores.
 
@@ -20,7 +29,7 @@ Os OPERANDOS são os elementos à serem manipulados pelos Operadores.
 
 <br>
 
-### Aritiméticos
+## Aritiméticos
 
 São mesmos operadores de Cálculo da Matemática.
 
@@ -52,9 +61,9 @@ São eles:
     ou
   - 5² = 25
 
-#### Precedência de operadores
-
 <br>
+
+### Precedência dos Operadores Aritiméticos
 
 O JavaScript possui uma ordem de precedência
 
@@ -66,7 +75,7 @@ No exemplo acima, o JavaScript irá realizar primeiramente a divisão `3 / 2` qu
 
 <br>
 
-Para alterar a ordem de precedência de uma equação, basta colocar a operação entre parêmteses `()`
+Para alterar a ordem de precedência de uma expressão, basta colocar a operação entre parêmteses `()`
 
 Exemplo:
 
@@ -74,7 +83,7 @@ Exemplo:
 
 <br>
 
-#### Ordem de Precedência
+### Ordem de Precedência
 
 1. `()`
 2. `**`
@@ -116,8 +125,69 @@ var Num = 10;
 Num++; // a var Num agora é igual a 11
 ```
 
-- Relacionais
-- Lógicos
-- Ternários
+<hr>
+
+## Relacionais
+
+Toda expressão que possui um operador Relacional, tem um resultado Booleano (`true` ou `false`).
+
+- `>` Maior que
+
+  - `5 > 2` = `true`
+
+- `<` Menor que
+
+  - `7 < 4` = `false`
+
+- `>=` Maior ou Igual
+
+  - `8 >= 8` = `true`
+
+- `<=` Menor ou Igual
+
+  - `9 <= 7` = `false`
+
+- `==` Igual
+
+  - `5 == 5` = `true`
+  - `5 == "5"` = `true`
+
+- `!=` Não igual / Diferente
+
+  - `4 != 4` = `false``
+
+- `===` Idêntico / Igualdade Restrita (considera o tipo)
+  - `5 === "5"` = `false`
 
 <hr>
+
+## Lógicos
+
+- `!` Negação / Não
+
+  - é um operador unário (aceita apenas um valor)
+  - Só aceita boolean
+
+- `&&` conjunção
+
+  - é um operador binário (aceita dois valores lógicos)
+  - precisa que os dois valores booleanos sejam concordantes
+
+- `||` disjunção
+  - é um operador binário
+  - precisa que apenas um dos dois valores booleanos seja verdadeiro
+
+<hr>
+
+## Ternários
+
+O operador ternário recebe sempre 3 OPERANDOS e funciona da seguinte maneira:
+
+```js
+var x = 8;
+var resultado = x % 2 == 0 ? A : B;
+
+resultado = A;
+```
+
+a `var resultado` recebe o valor de `A` pois a expressão `x % 2 == 0` retorna o valor booleano `true`, que tem o valor A atribuído à este retorno no operador ternário.
